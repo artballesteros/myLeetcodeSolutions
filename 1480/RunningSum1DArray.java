@@ -8,6 +8,9 @@ Key Idea:
     start
     
     Now keep adding previous until you reach the end of the array.
+
+    Time: O(n)
+    Space: O(1)
 */
 class Solution {
     public int[] runningSum(int[] nums) {

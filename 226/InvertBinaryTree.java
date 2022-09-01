@@ -19,6 +19,9 @@ Key Idea:
     Then switch them.
     
     So we takes nodes first before playing with the parent.
+
+    Time: O(n)
+    Space: O(1)
 */
 class Solution {
     public TreeNode invertTree(TreeNode root) {

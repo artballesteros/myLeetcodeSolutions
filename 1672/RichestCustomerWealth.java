@@ -3,7 +3,7 @@ Key Idea:
     Iterate through each subarray and keep track of sum.
     Compare sum to curr largest sum and replace if larger.
     
-    Time: O(n^2)
+    Time: O(n * m) (n accounts and m banks)
     Space: O(1)
 */
 class Solution {

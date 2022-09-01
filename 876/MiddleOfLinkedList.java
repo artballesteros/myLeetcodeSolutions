@@ -48,3 +48,30 @@ class Solution {
         return dummy;
     }
 }
+
+/*
+A much prettier solution. Exploits the pattern:
+    1          return 1
+    1 2        return 2
+    1 2 3      return 2
+    1 2 3 4    return 3
+    1 2 3 4 5  return 3
+    etc.
+    
+    The middle stays the same for two values (usually)
+    so every two jumps, we move the middle once.
+    
+    *Key Idea*: Always try to find patterns. Create your own test cases
+    if you have to and start small.
+*/
+class Solution2 {
+    public ListNode middleNode(ListNode head) {
+        ListNode middle = head;
+        ListNode end = head;
+        while (end != null && end.next != null) {
+            middle = middle.next;
+            end = end.next.next;
+        }
+        return middle;
+    }
+}

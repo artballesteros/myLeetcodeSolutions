@@ -32,17 +32,16 @@ Key Idea:
     Runtime: O(n)
     Space: O(1)
 */
+
 class Solution {
     public int removeDuplicates(int[] nums) {
-        int size = 1;
-        int val = nums[0];
+        int available = 1;
         for (int i = 1; i < nums.length; ++i) {
-            if (nums[i] != val) {
-                nums[size] = nums[i];
-                val = nums[i];
-                size++;
+            if (nums[i] != nums[available - 1]) {
+                nums[available] = nums[i];
+                available++;
             }
         }
-        return size;
+        return available;
     }
 }

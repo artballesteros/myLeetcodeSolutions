@@ -38,6 +38,8 @@ Key Idea:
      
      Time: O(n)
      Space: O(1)
+
+     Note: this also works for the stream follow-up question.
 */
 
 class Solution {
